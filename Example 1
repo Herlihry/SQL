@@ -1,0 +1,3 @@
+SELECT id, term, time,
+       COUNT(*) OVER (PARTITION BY term ORDER BY time) as seq_count
+FROM my_table
